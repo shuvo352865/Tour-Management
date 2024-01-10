@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDP-3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/stylehome.css">
+    <script src="https://kit.fontawesome.com/6d6230c717.js" crossorigin="anonymous"></script>
+  
+<style>
+ 
+  body{ max-width: 100%;}
+
+  .banner-img{
+      background-image: url('/static/images/bubt.jpg');
+      background-repeat: no-repeat;
+      width: 80%;
+      height: 70vh;
+      border-radius: 8px;
+  } 
+</style>
+
+</head>
+<body class="g-5 ms-5 me-5 px-5 py-5">
+    <header class="mb-5">
+        <!-------navbar------->
+ <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="{% url 'tourmate-details' %}">Tour Mate</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'trips' %}">Trips</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      More Services
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="{% url 'travel' %}">Bus Services</a></li>
+                      <li><a class="dropdown-item" href="{% url 'hotel' %}">Hotel Services</a></li>
+                      <li><a class="dropdown-item" href="{% url 'calculate' %}">Tour Calculator</a></li>
+                       <li><a class="dropdown-item" href="#">Discussion</a></li>
+                      <li><a class="dropdown-item" href="{% url 'aboutUs' %}">About Us</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                    </ul>
+                  </li>
+                 
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+ </nav>
+
+<!-------banner-------->
+<section class="bg-success-primary">
+  <div class="banner-img container mt-5 justify-content-center align-items-center">
+      <div class="bg-image justify-content-center align-items-center ">
+          <div class=" pt-5 align-items-center">
+              <h1 class="pt-3 mb-2 text-white fs-1 fw-bold text-center justify-content-center">Explore the world<br> with us</h1>
+          <p class=" fs-6 mb-4 text-center justify-content-center">we offer a wide range of travel options tailored to <br>meet each customer's unique needs and preferences. <br>Our team of experienced travel experts is committed<br> to providing exceptional customer service and making<br> every journey a truly unforgettable experience. <br> suitable legal solutions for matters concerning individuals.</p>
+          <div class="input-group text-center justify-content-center">
+             
+              <a button type="button" class="btn btn-outline-danger bg-danger text-white px-5 py-2 ms-3 rounded mb-5"  href="{% url 'tourmate-details' %}"  >Details</a>
+          </div>
+          </div>
+            </div>
+      </div>
+  </section>
+    </header>
+    <main>
+
+<!--------- section-1 --------->
+<section class="text-start text-md-center mb-5 ">
+  <h1 class="fs-1 fw-bold mb-2 mt-5" >Explore Our Services</h1>
+  <p class="text-danger fs-3 fw-semibold">"We provide services to make your tour easier."</p>
+  <hr class="w-50 mx-auto border-danger">
+  <div class="row row-cols-1 row-cols-sm-2  g-5 mt-5 px-5">
+      <div class="col align-items-center justify-content-center">
+        <h1 class="fs-1 fw-bold mb-4 mt-5" >Travel Calculator </h1>
+        <p class="">It helps you estimate the cost of your travel expenses. It can help you calculate the cost of transportation, accommodation, food, and activities based on the information you provide such as destination, dates, and budget. The travel calculator can be a useful tool to help you plan and budget for your trip, and it can also help you compare different travel options and make informed decisions about your travel plans..</p>
+        <a button class="py-2 px-8 btn btn-danger" href="{% url 'calculate' %}" >Calculate<img class="inline"
+        src="images/arrow.png" alt=""></a>
+          
+      </div>
+      <div class="col">
+          <img class="w-100 h-100" src="/static/images/places.jpg" alt="">
+      </div>
+  </div>
+</section>
+<!------- section-2 -------->
+<section class="text-start text-md-center mb-5 mt-5">
+ 
+  <div class="row row-cols-1 row-cols-sm-2 g-5 mt-5 px-5">
+      <div class="col mt-5">
+          <img class="w-100" src="/static/images/sundarban.jpg" alt="">
+      </div>
+      <div class="col align-items-center justify-content-center mt-5">
+        <h1 class="fs-1 fw-bold mb-4 mt-5" >Places</h1>
+        <p class="">Bangladesh is a country with many beautiful tourist destinations. Cox's Bazar is famous for having the longest natural sea beach in the world, while Sundarbans is the largest mangrove forest and home to the Bengal tiger. Srimangal is known for its picturesque tea gardens, Dhaka offers a mix of modern and traditional culture, and Rangamati provides breathtaking views of mountains, rivers, and waterfalls, as well as a chance to experience the culture of local ethnic communities. These destinations offer a variety of experiences for tourists, from scenic beauty and adventure to history and culture.</p>  
+        <button class="py-2 px-8 btn btn-danger">Explore More <img class="inline"
+          src="images/arrow.png" alt=""></button>    
+      </div>
+  </div>
+</section>
+<!-----slider/carousel----->
+<section class="mt-5 mb-5">
+    <div id="carouselExample" class="carousel slide bg-danger rounded bg-opacity-10 p-5">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                    <div class="ms-5" >
+                        <h1>TourMate Developers</h1>
+                    <p>We are a group of six individuals - Shahadat, Supriya, Sweety, Abir, Jony, and Shakil - who have collaborated to develop a web platform for tour management as part of our undergraduate program in the SDP 3 course. Under the supervision of our instructor, Jubayer Al Mahmud Sir, we have worked hard to design and develop a user-friendly web platform that will make tour planning and management easier for users. Our group is made up of individuals with diverse skills and backgrounds, and we have all contributed our unique perspectives and expertise to make this project a success.</p>
+                    <a button class="btn btn-danger ms-5" href="{% url 'aboutUs' %}"     >  About us</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <img src="/static/images/developer.jpg" class="d-block w-100 h-100 align-items-center" alt="...">
+                </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                    <div>
+                        <h1>Tour Mate</h1>
+                    <p>A Smart Solution of Your Tour</p>
+                    <button class="btn btn-danger">Explore</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <img src="/static/images/tour.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                    <div>
+                        <h1>Explore.</h1>
+                    <p>Explore the world With Tourmate</p>
+                    <button class="btn btn-danger">Explore</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <img src="/static/images/band.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon biker-zone-light-red" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</section>
+<!------- section-3 --------->
+<section class="container m">
+  <h2 class="text-center fs-1 mb-3">Popular Destination</h2>
+  <p
+  </p>
+  <div class="container text-center w-100">
+  <div class="row row-cols-1 g-3 row-cols-md-3 mt-5 mb-5">
+    <div class="col border border-light-subtle">
+      <img src="/static/images/cox.jpg" class="w-100" alt="">
+      <h4>Cox Bazar</h4>
+      <p>
+      </p>
+      <img class="mb-5" src="images/Frame.png" alt="">
+    </div>
+    <div class="col border border-light-subtle">
+      <img src="/static/images/band.jpg" class="w-100" alt="">
+      <h4>Bandarban</h4>
+      <p></p>
+      <img class="mb-5" src="images/Frame.png" alt="">
+    </div>
+    <div class="col border border-light-subtle">
+      <img src="/static/images/sundarban.jpg" class="w-100" alt="">
+      <h4>sundarban</h4>
+      <p> </p>
+      <img class="mb-5" src="images/Frame.png" alt="">
+    </div>
+    <div class="col border border-light-subtle">
+      <img src="/static/images/gua.jpg" class="w-100" alt="">
+      <h4>GULIAKHALI SEA BEACH, CHITTAGONG</h4>
+      <p></p>
+      <img class="mb-5" src="images/Frame.png" alt="">
+    </div>
+    <div class="col border border-light-subtle ">
+      <img src="/static/images/sona.jpg" class="w-100" alt="">
+      <h4>SONARGAON</h4>
+      <p></p>
+      <img class="mb-5" src="images/Frame.png" alt="">
+    </div>
+    <div class="col border border-light-subtle">
+      <img src="/static/images/kap.jpg" class="w-100" alt="">
+      <h4>KAPTAI LAKE</h4>
+      <p> </p>
+      <img class="mb-5" src="images/Frame.png" alt="">
+    </div>
+  </div>
+</div> 
+</section>
+</main>
+<!------- footer -------->
+<footer class="mt-5">
+  <section class="bg-black pt-5">
+    <div class="container text-center text-white p-5 w-75">
+      <div class="row text-start mt-5 fw-semibold">
+      <div class="col text-secondary">
+          <img class="mb-1" src="images/logo.png" alt=""> <br>
+          <p>“I HAVE FOUND ADVENTURE IN FLYING, IN WORLD TRAVEL, IN BUSINESS, AND EVEN CLOSE AT HAND… ADVENTURE IS A STATE OF MIND- AND SPIRIT,, -Jacqueline Cochran</p>
+      </div>
+      <div class="col">Usefull Links <br>
+          <a class="text-decoration-none text-secondary" href="{% url 'home' %}">Home</a><br>
+          <a class="text-decoration-none text-secondary" href="{% url 'tourmate-details' %}">About tourmate</a><br>
+          <a class="text-decoration-none  text-secondary" href="{% url 'aboutUs' %}">contact us</a>
+      </div>
+      <div class="col">Contact Now <br>
+          <div class="text-secondary">
+              <p class="pb-1">BUBT,R/A<br>
+                Mirpur-02, Dhaka 1216</p>
+                  <p class="pb-1">+88 01708757357 <br>
+                  +88 01753358848</p>
+                  <p>shahadat@ieee.org sweety041@gmail.com<br>
+                  shakil048@gmail.com  supriya047@gmail.com<br>
+                  abir770@gmail.com   </p>
+          </div>
+      </div>
+      <div class="col">Subscribe <br>
+          <p class="text-secondary">Subscribe Us for Connected With Tourmate </p>
+          <div class="input-group">
+              <input type="mail" class="form-control rounded" placeholder="Your Email" aria-label="mail" aria-describedby="mail-addon" />
+              <button type="button" class="btn btn-outline-secondary border-light-subtle"><i class="fa-regular fa-paper-plane"></i></button>
+            </div> 
+      </div>
+      </div>
+  </div>
+  </section>
+</footer>
+
+        <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

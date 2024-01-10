@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trips</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/6d6230c717.js" crossorigin="anonymous"></script>
+    
+  </head>
+  <body class="container-lg">
+    <header class="mt-2 mb-5">
+       <!-------navbar------->
+ <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="{% url 'tourmate-details' %}">Tour Mate</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url  'home'  %}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'trips' %}">Trips</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      More Services
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="{% url 'travel' %}">Bus Services</a></li>
+                      <li><a class="dropdown-item" href="{% url 'hotel' %}">Hotel Services</a></li>
+                      <li><a class="dropdown-item" href="{% url 'calculate' %}">Tour Calculator</a></li>
+                       <li><a class="dropdown-item" href="#">Discussion</a></li>
+                      <li><a class="dropdown-item" href="{% url 'aboutUs' %}">About Us</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                    </ul>
+                  </li>
+                 
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+ </nav>
+
+    </header>
+<main>
+ 
+
+<!---------Tour Mate details section----->
+<section class="py-2 px-2">
+    <h1 class="text-center mt-5 mb-4">Tour Mate</h1>
+    <img class="w-100" src="/static/images/adv.jpg" alt="">
+    <p> Tourmate is a comprehensive tour management website designed to simplify the process of planning and managing trips. It offers a wide range of features and tools that cater to the diverse needs of modern travelers. With Tourmate, users can easily search for and select tour packages based on their preferred destination, duration, budget, and other parameters. The website provides detailed information about popular tourist destinations, including attractions, local culture, cuisine, weather, and more. This allows travelers to make informed decisions and plan their itinerary accordingly.
+
+In addition to tour packages, Tourmate also offers a range of other features to make the travel experience as seamless and stress-free as possible. These include real-time booking capabilities, online payment options, and 24/7 customer support. The website's secure payment gateway ensures that users can make transactions safely and easily, without having to worry about fraud or other security issues.
+
+One of the key benefits of using Tourmate is its user-friendly interface. The website is designed to be intuitive and easy to use, even for those who are not tech-savvy. It features a simple and elegant design, with clear and concise information presented in a visually appealing manner. This makes it easy for users to find what they need, whether it's a specific tour package, information about a particular destination, or customer support.
+
+Another important feature of Tourmate is its emphasis on local experiences. The website provides detailed information about local culture, customs, and cuisine, helping travelers to immerse themselves in the local way of life. This is especially important for those who are interested in experiencing new cultures and getting a glimpse of what life is like in different parts of the world.
+
+Overall, Tourmate is an excellent tool for anyone looking to plan and manage their next trip. Its user-friendly interface, comprehensive features, and emphasis on local experiences make it an ideal choice for travelers of all ages and backgrounds. Whether you are planning a solo adventure or a family vacation, Tourmate has everything you need to make your trip a success.</p>
+
+ 
+</section>
+
+ </main>
+
+<footer class="mt-5">
+  <section class="bg-black pt-5">
+    <div class="container text-center text-white p-5 w-75">
+      <div class="row text-start mt-5 fw-semibold">
+      <div class="col text-secondary">
+          <img class="mb-1" src="images/logo.png" alt=""> <br>
+          <p>“I HAVE FOUND ADVENTURE IN FLYING, IN WORLD TRAVEL, IN BUSINESS, AND EVEN CLOSE AT HAND… ADVENTURE IS A STATE OF MIND- AND SPIRIT,, -Jacqueline Cochran</p>
+      </div>
+      <div class="col">Usefull Links <br>
+          <a class="text-decoration-none text-secondary" href="{% url 'home' %}">Home</a><br>
+          <a class="text-decoration-none text-secondary" href="{% url 'tourmate-details' %}">About tourmate</a><br>
+          <a class="text-decoration-none  text-secondary" href="{% url 'aboutUs' %}">contact us</a>
+      </div>
+      <div class="col">Contact Now <br>
+          <div class="text-secondary">
+              <p class="pb-1">BUBT,R/A<br>
+                Mirpur-02, Dhaka 1216</p>
+                  <p class="pb-1">+88 01708757357 <br>
+                  +88 01753358848</p>
+                  <p>shahadat@ieee.org sweety041@gmail.com<br>
+                  shakil048@gmail.com  supriya047@gmail.com<br>
+                  abir770@gmail.com   </p>
+          </div>
+      </div>
+      <div class="col">Subscribe <br>
+          <p class="text-secondary">Subscribe Us for Connected With Tourmate </p>
+          <div class="input-group">
+              <input type="mail" class="form-control rounded" placeholder="Your Email" aria-label="mail" aria-describedby="mail-addon" />
+              <button type="button" class="btn btn-outline-secondary border-light-subtle"><i class="fa-regular fa-paper-plane"></i></button>
+            </div> 
+      </div>
+      </div>
+  </div>
+  </section>
+</footer>
+
+        <!-- bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+      </body>
+      </html>
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
